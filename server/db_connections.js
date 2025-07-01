@@ -9,11 +9,13 @@ const db = await mysql.createConnection ( {
 
 })
 
+console.log("B")
 
 
-db.connect((err)=> {
-    if (err){
-        console.log ("error on DBconnect", err)
+
+db.connect((error)=> {
+    if (error){
+        console.log ("error on DBconnect", error)
         return;
     }
     console.log("connected to user_information Database")
