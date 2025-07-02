@@ -8,6 +8,13 @@ const app = express();
 app.use(cors());
 
 app.use('/user', userRouter)
+app.use('/math',mathRouter)
+app.use('/sports',sportsRouter)
+app.use('/theatre',theatreRouter)
+app.use('/music', musicRouter)
+app.use('contactUs', contactUsRouter)
+
+
 
 app.get("/", (req,res)=>{
     res.send("the server is running")
