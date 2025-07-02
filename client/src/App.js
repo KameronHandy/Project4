@@ -1,18 +1,19 @@
 import './App.css';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Testimport from './Components/Testimport';
 import Navbars from './Components/Navbars';
-import user_login from './Components/user_login';
-import categories from './Components/categories';
-import j from './Components/j';
+import User_login from './Components/User_login';
+import Categories from './Components/Categories';
 
 function App() {
   return (
 
     <>
     <Navbars />
-    <user_login/>
-    <j />
+    <Testimport />
+    <User_login/>
+    <Categories />
     </>
 
   );
