@@ -3,7 +3,7 @@ import db from '../db_connections.js'
 
 const Router = express.Router()
 
-console.log('D')
+console.log('A')
 
 Router.get('/', async (req,res)=>{
     try {
@@ -20,11 +20,15 @@ Router.get('/', async (req,res)=>{
 
 Router.post("/", async (req,res)=>{
     try {
-        const {Q,A} = req.body
-        await db.query("Insert Into user_information (Q, A) values(?,?)",[Q,A])
-        res.status(200).send("Welcome to Blank Trivia")
+        const {Email,UserThoughts} = req.body
+        await db.query("Insert Into user_information (Email,UserThoughts) values(?,?)",[Email,UserThoughts])
+        res.status(200).send("Added")
     }
     catch (error){
         res.status(500).send("Server Error on login")
     }
 })
+
+console.log('C')
+
+export default Router;
