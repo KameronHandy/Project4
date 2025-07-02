@@ -1,15 +1,18 @@
 import './App.css';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './Components/Navbar';
+import Navbars from './Components/Navbars';
 import user_login from './Components/user_login';
+import categories from './Components/categories';
+import j from './Components/j';
 
 function App() {
   return (
 
     <>
-    <Navbar />
-    <user_login />
-  
+    <Navbars />
+    <user_login/>
+    <j />
     </>
 
   );
