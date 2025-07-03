@@ -1,14 +1,13 @@
 import Table from 'react-bootstrap/Table';
 
-function categories() {
+function Categories() {
   return (
     <Table striped bordered hover>
       <thead>
         <tr>
           <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>Question</th>
+          <th>Answer</th>
         </tr>
       </thead>
       <tbody>
@@ -34,4 +33,4 @@ function categories() {
   );
 }
 
-export default categories;
+export default Categories;

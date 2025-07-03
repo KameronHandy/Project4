@@ -5,21 +5,24 @@ const Router = express.Router()
 
 console.log('A')
 
-Router.get('/', async (req,res)=>{
-    try {
-        const [result] = await db.query("SELECT * from user_information")
-        console.log (result)
-        res.status(200).json(result)
+// Router.get('/', async (req,res)=>{
+//     try {
+//         const [result] = await db.query("SELECT * from user_information")
+//         console.log (result)
+//         res.status(200).json(result)
 
-    }
+//     }
 
-    catch(err){
-        res.status(500).send("error while selecting user database", err)
-    }
-})
+//     catch(err){
+//         res.status(500).send("error while selecting user database", err)
+//     }
+// })
+
+
 
 Router.post("/", async (req,res)=>{
     try {
+        console.log("beezneees")
         const {Username,user_password} = req.body
         await db.query("Insert Into user_information (Username, user_password) values(?,?)",[Username,user_password])
         res.status(200).send("Welcome to Blank Trivia")

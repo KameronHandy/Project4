@@ -7,18 +7,29 @@ import User_login from './Components/User_login';
 import Categories from './Components/Categories';
 import ContactUs from './Components/ContactUs';
 
+
 function App() {
   return (
 
     <>
     <Navbars />
-    <Testimport />
     <User_login/>
     <Categories />
     <ContactUs />
+
     </>
 
   );
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+

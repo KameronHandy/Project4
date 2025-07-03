@@ -7,7 +7,7 @@ console.log('A')
 
 Router.get('/', async (req,res)=>{
     try {
-        const [result] = await db.query("SELECT * from user_information")
+        const [result] = await db.query("SELECT * from sports")
         console.log (result)
         res.status(200).json(result)
 
@@ -20,8 +20,8 @@ Router.get('/', async (req,res)=>{
 
 Router.post("/", async (req,res)=>{
     try {
-        const {Username,user_password} = req.body
-        await db.query("Insert Into user_information (Username, user_password) values(?,?)",[Username,user_password])
+        const {Q,A} = req.body
+        await db.query("Insert Into sports (Q,A) values(?,?)",[Q,A])
         res.status(200).send("Welcome to Blank Trivia")
     }
     catch (error){
