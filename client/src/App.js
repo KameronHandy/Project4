@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Testimport from './Components/Testimport';
 import Navbars from './Components/Navbars';
 import User_login from './Components/User_login';
 import Categories from './Components/Categories';
@@ -13,9 +13,14 @@ function App() {
 
     <>
     <Navbars />
-    <User_login/>
-    <Categories />
-    <ContactUs />
+
+    <BrowserRouter>
+      <Routes>
+          <Route path="/Home" element={<User_login/>} />
+          <Route path="/ContactUs" element={<ContactUs />} />
+          <Route path="/Categories" element ={<Categories />}/>
+      </Routes>
+    </BrowserRouter>
 
     </>
 
