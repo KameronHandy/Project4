@@ -1,8 +1,8 @@
 import {useEffect, useState} from 'react'
 import Table from 'react-bootstrap/Table';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button'
 import axios from "axios"
+import Categories from './Categories';
+import AddingMath from '../Components/AddingMath'
 
 export default function Math() {
 
@@ -21,21 +21,6 @@ export default function Math() {
     }
     fetchResponse();
    }, [])
-
-  function UserInput (event){
-    const{name,value}= (event.target)
-    setuserQ({...userQ, [name]:value})
-  }
-
-  async function handleSubmit(event){
-    try{
-      const response = await axios.post("http://localhost:4000/math/", {Q: userQ.Q, A: userQ.A})
-      console.log(response)
-    }
-    catch (error) {
-      console.log("this is an error",error)
-    }
-  }
 
   return (
     <>
@@ -58,19 +43,9 @@ export default function Math() {
       </tbody>
     </Table>
 
-    <Form>
-    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-        <Form.Label>Question</Form.Label>
-        <Form.Control as="textarea" type="email" placeholder="Math Question" name="Q" onChange={(event) => UserInput(event)}/>
-    </Form.Group>
-    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-        <Form.Label>Answer</Form.Label>
-        <Form.Control as="textarea" rows={3} name="A" onChange={(event) => UserInput(event)}/>
-    </Form.Group>
-    </Form>
+    <AddingMath />
 
-    <Button variant="dark" onClick={handleSubmit}>Add Q & A</Button>
-    </>
+  </>
   )
 }
 

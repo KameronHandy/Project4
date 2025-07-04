@@ -1,47 +1,49 @@
-import {useState} from 'react'
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
-import Button from 'react-bootstrap/Button'
+import {useEffect, useState} from 'react'
+import Table from 'react-bootstrap/Table';
 import axios from "axios"
+import AddingTheatre from '../Components/AddingTheatre'
 
-export default function User_login() {
+export default function Theatre() {
 
-  const[userQ, setuserQ]=useState({
-    Q:"",
-    A:"",
-  })
+  const[userQ, setuserQ]=useState([
+    {Q:"", A:""}
+  ])
 
-
-  function UserInput (event){
-    const{name,value}= (event.target)
-    setuserQ({...userQ, [name]:value})
-  }
-
-  async function handleSubmit(event){
-    try{
-      const response = await axios.post("http://localhost:4000/theatre/", {Q: userQ.Q, A: userQ.A})
+  useEffect(() =>{
+    const fetchResponse = async () => {
+      console.log("a")
+      console.log ("Use Effect ...")
+      const response = await axios.get("http://localhost:4000/theatre/")
       console.log(response)
+      console.log(response.data)
+      setuserQ (response.data)
     }
-    catch (error) {
-      console.log("this is an error",error)
-    }
-  }
+    fetchResponse();
+   }, [])
 
   return (
     <>
-    <Form>
-    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-        <Form.Label>Question</Form.Label>
-        <Form.Control as="textarea" type="email" placeholder="name@example.com" name="Q" onChange={(event) => UserInput(event)}/>
-    </Form.Group>
-    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-        <Form.Label>Answer</Form.Label>
-        <Form.Control as="textarea" rows={3} name="A" onChange={(event) => UserInput(event)}/>
-    </Form.Group>
-    </Form>
+    <Table striped bordered hover>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Question</th>
+          <th>Answer</th>
+        </tr>
+      </thead>
+      <tbody>
+        {userQ.map((user,index)=>(
+          <tr key={index}>
+            <td>{index+1}</td>
+            <td>{user.Q}</td>
+            <td>{user.A}</td>
+          </tr>
+        ))}
+      </tbody>
+    </Table>
 
-    <Button variant="dark" onClick={handleSubmit}>Add Q & A</Button>
-    </>
+    <AddingTheatre />
+
+  </>
   )
 }
