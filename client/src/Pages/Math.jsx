@@ -1,7 +1,6 @@
 import {useState} from 'react'
-import Col from 'react-bootstrap/Col';
+import Table from 'react-bootstrap/Table';
 import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button'
 import axios from "axios"
 
@@ -15,7 +14,7 @@ export default function User_login() {
 
   function UserInput (event){
     const{name,value}= (event.target)
-    setuserInfo({...userQ, [name]:value})
+    setuserQ({...userQ, [name]:value})
   }
 
   async function handleSubmit(event){
@@ -37,6 +36,25 @@ export default function User_login() {
 
   return (
     <>
+
+
+<Table striped bordered hover>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Question</th>
+          <th>Answer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </Table>
+
     <Form>
     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
         <Form.Label>Question</Form.Label>

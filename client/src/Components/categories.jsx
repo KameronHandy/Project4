@@ -1,36 +1,30 @@
-import Table from 'react-bootstrap/Table';
 
-function Categories() {
-  return (
-    <Table striped bordered hover>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Question</th>
-          <th>Answer</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td colSpan={2}>Larry the Bird</td>
-          <td>@twitter</td>
-        </tr>
-      </tbody>
-    </Table>
-  );
-}
+// import Nav from 'react-bootstrap/Nav';
+// import Math from './Pages/Math'
 
-export default Categories;
+// function Categories() {
+//   return (
+//     <>
+//     <Nav fill variant="tabs" defaultActiveKey="/home">
+//       <Nav.Item>
+//         <Nav.Link href="/Math">Active</Nav.Link>
+//       </Nav.Item>
+//       <Nav.Item>
+//         <Nav.Link eventKey="link-1">Loooonger NavLink</Nav.Link>
+//       </Nav.Item>
+//       <Nav.Item>
+//         <Nav.Link eventKey="link-2">Link</Nav.Link>
+//       </Nav.Item>
+//       <Nav.Item>
+//         <Nav.Link eventKey="disabled" disabled>
+//           Disabled
+//         </Nav.Link>
+//       </Nav.Item>
+//     </Nav>
+//     </>
+
+
+//   );
+// }
+
+// export default Categories;

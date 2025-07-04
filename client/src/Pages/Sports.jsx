@@ -15,7 +15,7 @@ export default function User_login() {
 
   function UserInput (event){
     const{name,value}= (event.target)
-    setuserInfo({...userQ, [name]:value})
+    setuserQ({...userQ, [name]:value})
   }
 
   async function handleSubmit(event){
