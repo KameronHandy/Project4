@@ -33,6 +33,8 @@ export default function User_login() {
 
   return (
     <>
+
+    <h4> Sign Up</h4>
     <Form>
        <Form.Group as={Row} className="mb-3" controlId="formPlaintextPassword">
         <Col sm="10">
@@ -47,7 +49,7 @@ export default function User_login() {
       </Form.Group>
     </Form>
 
-    <Button variant="dark" onClick={handleSubmit}>Login</Button>
+    <Button variant="dark" onClick={handleSubmit}>Sign Up</Button>
 
     
     

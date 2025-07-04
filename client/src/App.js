@@ -6,6 +6,7 @@ import Navbars from './Components/Navbars';
 import User_login from './Components/User_login';
 import Categories from './Components/Categories';
 import ContactUs from './Components/ContactUs';
+import Registration from './Components/Registration'
 
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
 
     <BrowserRouter>
       <Routes>
-          <Route path="/Home" element={<User_login/>} />
+          <Route path="/Home" element={<Registration/>} />
+          <Route path="/User_login" element={<User_login/>} />
           <Route path="/ContactUs" element={<ContactUs />} />
           <Route path="/Categories" element ={<Categories />}/>
       </Routes>
