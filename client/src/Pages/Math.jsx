@@ -1,7 +1,6 @@
 import {useEffect, useState} from 'react'
 import Table from 'react-bootstrap/Table';
 import axios from "axios"
-import Categories from './Categories';
 import AddingMath from '../Components/AddingMath'
 
 export default function Math() {
