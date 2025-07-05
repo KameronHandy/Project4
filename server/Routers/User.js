@@ -22,7 +22,6 @@ console.log('A')
 
 Router.post("/", async (req,res)=>{
     try {
-        console.log("beezneees")
         const {Username,user_password} = req.body
         await db.query("Insert Into user_information (Username, user_password) values(?,?)",[Username,user_password])
         res.status(200).send("Welcome to Blank Trivia")

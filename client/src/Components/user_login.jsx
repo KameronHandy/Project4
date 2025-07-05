@@ -20,7 +20,7 @@ export default function User_login() {
 
   async function handleSubmit(event){
     try{
-      const response = await axios.post("http://localhost:4000/user/", {Username: userInfo.Username, user_password: userInfo.user_password})
+      const response = await axios.post("http://localhost:4000/login/", {Username: userInfo.Username, user_password: userInfo.user_password})
       console.log(response)
     }
     catch (error) {

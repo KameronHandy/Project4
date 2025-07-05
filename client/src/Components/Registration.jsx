@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button'
 import axios from "axios"
 
-export default function User_login() {
+export default function Registration() {
 
   const[userInfo, setuserInfo]=useState({
     Username:"",

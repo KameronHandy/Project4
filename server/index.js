@@ -7,6 +7,7 @@ import musicRouter from "./Routers/Music.js";
 import theatreRouter from "./Routers/Theatre.js";
 import sportsRouter from "./Routers/Sports.js";
 import contactUsRouter from "./Routers/ContactsUs.js"
+import loginRouter from "./Routers/Login.js"
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.use('/sports', sportsRouter)
 app.use('/theatre',theatreRouter)
 app.use('/music', musicRouter)
 app.use('contactUs', contactUsRouter)
+app.use('/login', loginRouter)
 
 
 
