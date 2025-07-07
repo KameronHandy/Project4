@@ -1,8 +1,1 @@
-const db = await mysql.createConnection ( {
-    host:'localhost',
-    user:'root',
-    port:'3006',
-    password:'Katherinehasitall1234!',
-    database:'project4_testdatabase'
 
-})
