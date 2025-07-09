@@ -1,11 +1,11 @@
 Question/Answer Webpage
 
-Overview
+# Overview
 
 This is a simple Questions and Answers web application where users can log in, Create Questions and Answers, And give user feedback. This project uses React for Frontend and Backend development.
 
 
-Features
+# Features
 
 User login
 Logging Questions/Answers
@@ -13,7 +13,7 @@ Multiple Categories
 Ability to Recieve User Input
 
 
-
+# User Table
 CREATE TABLE `user_information` (
   `user_id` int NOT NULL AUTO_INCREMENT,
   `Username` varchar(45) NOT NULL,
@@ -23,7 +23,7 @@ CREATE TABLE `user_information` (
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 #User Table
 
-#Categories
+# Categories
 
 CREATE TABLE `categories` (
   `idcategories` int NOT NULL AUTO_INCREMENT,
@@ -68,7 +68,7 @@ CREATE TABLE `theatre` (
 
 
 
-#ContactUs Table
+# ContactUs Table
 
 CREATE TABLE `contactus` (
   `idContactUs` int NOT NULL AUTO_INCREMENT,
@@ -79,7 +79,7 @@ CREATE TABLE `contactus` (
 
 
 
-#Screen Shots
+# Screen Shots
 ![Screenshot 2025-07-09 142050](https://github.com/user-attachments/assets/0febde55-2c3f-4df0-90d1-b47159d6b806)
 
 ![Screenshot 2025-07-09 142112](https://github.com/user-attachments/assets/14a6395b-9b30-450a-978b-fc86630fa843)
@@ -91,7 +91,7 @@ CREATE TABLE `contactus` (
 ![Screenshot 2025-07-09 142218](https://github.com/user-attachments/assets/07b61170-5b08-488c-a71a-262346169760)
 
 
-#Technologies Used
+# Technologies Used
 
     React.js
     React Router
@@ -100,12 +100,13 @@ CREATE TABLE `contactus` (
     Express.js
     Node.js
 
-#Future Improvements
+# Future Improvements
+
 Incorporating A auto-refresh so the User doesn't have to refresh the page manually to see the updated Question/Answer.
 
 Possibly adding Radio buttons for a multiple Choice selection
 
 Including an optional timer for if you wanted to use the Question/Answer Live
 
-#Author
+# Author
 https://www.linkedin.com/in/kameron-handy-104ab268/
