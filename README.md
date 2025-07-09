@@ -7,10 +7,10 @@ This is a simple Questions and Answers web application where users can log in, C
 
 # Features
 
-User login
-Logging Questions/Answers
-Multiple Categories
-Ability to Recieve User Input
+#User login
+#Logging Questions/Answers
+#Multiple Categories
+#Ability to Recieve User Input
 
 
 # User Table
