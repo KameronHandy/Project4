@@ -37,12 +37,12 @@ CREATE TABLE `questions` (
   PRIMARY KEY (`idQuestions`)
 
     
-    CREATE TABLE `contactus` (
-      `idContactUs` int NOT NULL AUTO_INCREMENT,
-      `Email` varchar(45) DEFAULT NULL,
-      `UserThoughts` varchar(500) DEFAULT NULL,
-      PRIMARY KEY (`idContactUs`)
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `contactus` (
+`idContactUs` int NOT NULL AUTO_INCREMENT,
+`Email` varchar(45) DEFAULT NULL,
+`UserThoughts` varchar(500) DEFAULT NULL,
+PRIMARY KEY (`idContactUs`)
+    ) 
 
 ```
 

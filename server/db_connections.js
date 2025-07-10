@@ -9,7 +9,7 @@ const db = await mysql.createConnection ( {
 
 })
 
-console.log("B")
+
 
 
 

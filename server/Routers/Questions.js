@@ -3,7 +3,6 @@ import db from '../db_connections.js'
 
 const Router = express.Router()
 
-console.log('A')
 
 Router.get('/:id', async (req,res)=>{
     try {
@@ -30,6 +29,6 @@ Router.post("/", async (req,res)=>{
     }
 })
 
-console.log('C')
+
 
 export default Router;
