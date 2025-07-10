@@ -1,32 +1,37 @@
 import Nav from 'react-bootstrap/Nav';
-import Math from './Math'
+import {useEffect, useState} from 'react'
+import axios from 'axios'
 
 
 
 function Categories() {
+  const[categories, setCategories]=useState([
+    {title:""}
+  ])
+
+  useEffect(() =>{
+    const fetchResponse = async () => {
+      console.log("a")
+      console.log ("Use Effect ...")
+      const response = await axios.get("http://localhost:4000/categories/")
+      console.log(response)
+      console.log(response.data)
+      setCategories (response.data)
+    }
+    fetchResponse();
+   }, [])
+
+
   return (
     <>
     <Nav fill variant="tabs" defaultActiveKey="/home">
-      <Nav.Item>
-        <Nav.Link href="/Math">Math</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-      <Nav.Link href="/Music">Music</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-      <Nav.Link href="/Sports">Sports</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-      <Nav.Link href="/Theatre">Theare</Nav.Link>
-      </Nav.Item>
+      {categories.map((category,index)=>(
+        <Nav.Item>
+          <Nav.Link href={`/Questions/${category.idcategories}`}>{category.title}</Nav.Link>
+        </Nav.Item>
+        ))}
     </Nav>
-
-
-
-
     </>
-
-
   );
 }
 

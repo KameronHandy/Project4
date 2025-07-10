@@ -7,10 +7,7 @@ import User_login from './Components/User_login';
 import Categories from './Pages/Categories';
 import ContactUs from './Components/ContactUs';
 import Registration from './Components/Registration'
-import Math from './Pages/Math'
-import Music from './Pages/Music'
-import Sports from './Pages/Sports'
-import Theatre from './Pages/Theatre'
+import Questions from './Pages/Questions';
 
 
 function App() {
@@ -24,16 +21,11 @@ function App() {
           <Route path="/Home" element={<Registration/>} />
           <Route path="/User_login" element={<User_login/>} />
           <Route path="/ContactUs" element={<ContactUs />} />
-          <Route path="/Categories" element ={<Categories />}/>
-          <Route path="/Math" element={<Math />} />
-          <Route path="/Music" element={<Music />} />
-          <Route path="/Sports" element={<Sports />} />
-          <Route path="/Theatre" element ={<Theatre />}/>
+          <Route path="/Questions/:id" element={<Questions />} />
+          <Route path="/Categories/" element ={<Categories />}/>
       </Routes>
     </BrowserRouter>
-
     </>
-
   );
 }
 
